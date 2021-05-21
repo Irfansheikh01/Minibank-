@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="author" content="Wink Hosting (www.winkhosting.com)" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" type="text/css" />
+	<title>RedTie</title>
+
+
+
+</head>
+<body>
+	<div id="page" align="center">
+		<div id="content" style="width:800px">
+			<div id="logo">
+				<div style="margin-top:70px" class="whitetitle">MiniBank</div>
+			</div>
+			<div id="topheader">
+
+			</div>
+			<div id="menu">
+				<div align="right" class="smallwhitetext" style="padding:9px;">
+					<a href="{{ url_for('index') }}">Home</a> |
+					<a href="{{ url_for('About_us') }}">About Us</a> |
+					<a href="{{ url_for('Services') }}">Our Services</a> |
+					<a href="{{ url_for('Contact_us') }}">Contact Us</a>
+				</div>
+			</div>
+
+			<div id="contenttext">
+				<div style="padding:10px">
+					<span class="titletext">Welcome to MiniBank!</span>
+					</div>
+					<div class="bodytext" style="padding:12px;" align="justify">
+					<h2> One place for all banking activities.</h2>
+					<h4> Services Provided by us</h4>
+						<ul style="font-size: 12px">
+							<li> Debit Card / Debit Card facilities</li> <br>
+							<li> Netbanking using RTGS / NEFT </li> <br>
+							<li> Easyloans and advances </li> <br>
+							<li> Advaced SIP Schemes.</li> <br>
+						</ul>
+						<img src="{{ url_for('static',filename='images/b1.jpg') }}" height="200" width="500"/>
+				</div>
+			</div>
+			<div id="leftpanel">
+				<div align="justify" class="graypanel">
+					<span class="smalltitle">Users Area</span><br /><br />
+					<h4> User Login </h4>
+					<form method="post" action="/checkUser">
+						<table>
+							<tr>
+								<td>
+									Email Id
+								</td>
+								<td>
+									<input type="text" size="15	" name="temail" required/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Password
+								</td>
+								<td>
+									<input size="15	" type="password" name="tpass" required />
+								</td>
+							</tr>
+							<tr>
+								<td>
+
+								</td>
+								<td>
+									<input type="submit" value="Login" />
+								</td>
+							</tr>
+						</table>
+					</form>
+
+					<h4> New User Signup </h4>
+					<form method="post" action="/storeUser">
+						<table>
+							<tr>
+								<td>
+									Email Id
+								</td>
+								<td>
+									<input type="text" size="15	" name="temail1" required/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Password
+								</td>
+								<td>
+									<input type="password" size="15	" name="tpass1" required/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Confirm Password
+								</td>
+								<td>
+									<input type="password" size="15	" name="tpass2" required />
+								</td>
+							</tr>
+							<tr>
+								<td>
+
+								</td>
+								<td>
+									<input type="submit" value="Signup" />
+								</td>
+							</tr>
+						</table>
+					</form><br>
+				</div>
+			</div>
+			<div id="footer" class="smallgraytext">
+				MiniBank
+				&copy; 2020
+			</div>
+		</div>
+	</div>
+</body>
+</html>

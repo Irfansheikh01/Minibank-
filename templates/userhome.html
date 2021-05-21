@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="author" content="Wink Hosting (www.winkhosting.com)" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" type="text/css" />
+	<title>RedTie</title>
+</head>
+<body>
+	<div id="page" align="center">
+		<div id="content" style="width:800px">
+			<div id="logo">
+				<div style="margin-top:70px" class="whitetitle">MiniBank</div>
+			</div>
+			<div id="topheader">
+
+			</div>
+			<div id="menu">
+				<div align="right" class="smallwhitetext" style="padding:9px;">
+
+					<a href="{{ url_for('myaccount') }}">My Account</a> |
+					<a href="{{ url_for('trans') }}">Transactions</a> |
+					<a href="{{ url_for('mobile') }}">Mobile Recharge</a> |
+					<a href="{{ url_for('funds') }}">Fund Transfer</a> |
+                    <a href="{{ url_for('settings') }}">Setting</a> |
+                    <a href="{{ url_for('index') }}">Logout</a>
+				</div>
+			</div>
+
+			<div id="contenttext">
+				<div style="padding:10px">
+					<span class="titletext">Welcome to MiniBank!</span>
+					</div>
+					<div class="bodytext" style="padding:12px;" align="justify">
+					<h3> One place for all banking activities.</h3>
+					<h3> Welcome back user <b><i>{{ user }} </i></b>!!!! </h3>
+                    <h3> :: Home Page :: </h3>
+						<img src="{{ url_for('static',filename='images/b1.jpg') }}" height="200" width="500"/>
+				</div>
+			</div>
+			<div id="leftpanel">
+				<div align="justify" class="graypanel">
+					<span class="smalltitle">What is New ?</span><br /><br />
+
+				</div>
+			</div>
+			<div id="footer" class="smallgraytext">
+				MiniBank
+				&copy; 2020
+			</div>
+		</div>
+	</div>
+</body>
+</html>
